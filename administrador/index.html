@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador - TecSell</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body onload="cargarInventario()">
+
+    <div class="panel-container">
+        <div class="header-panel">
+            <img src="../img/logo-tecsell.png" alt="Logo" width="80">
+            <h1>Panel de Administrador</h1>
+            <a href="../index.html" class="btn-salir">Cerrar Sesión</a>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn-accion" onclick="mostrarTodo()">Mostrar Inventario Completo</button>
+        </div>
+
+        <!-- Formulario para agregar productos nuevos -->
+        <div class="card" style="margin-bottom: 25px; border-top-color: var(--color-naranja);">
+            <h3>Agregar Nuevo Producto al Inventario</h3>
+            <form id="formAgregar" onsubmit="agregarProductoAdmin(event)">
+                <div class="input-group">
+                    <label>Nombre del Producto:</label>
+                    <input type="text" id="nuevoNombre" required>
+                </div>
+                <div class="input-group">
+                    <label>Stock Inicial:</label>
+                    <input type="number" id="nuevoStock" required>
+                </div>
+                <div class="input-group">
+                    <label>Precio ($):</label>
+                    <input type="number" id="nuevoPrecio" required>
+                </div>
+                <button type="submit" class="btn-accion btn-naranja">Guardar Producto</button>
+            </form>
+        </div>
+
+        <h2>Lista de Productos</h2>
+        <div id="productos" class="productos-grid">Cargando inventario...</div>
+    </div>
+
+    <!-- Scripts conectados desde la carpeta superior -->
+    <script src="../js/inventario.js"></script>
+    <script src="../js/administrador.js"></script>
+</body>
+</html>

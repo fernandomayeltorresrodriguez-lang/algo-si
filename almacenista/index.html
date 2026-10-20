@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Almacén - TecSell</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body onload="cargarInventario()">
+
+    <div class="panel-container">
+        <div class="header-panel">
+            <img src="../img/logo-tecsell.png" alt="Logo" width="80">
+            <h1>Panel de Almacenista</h1>
+            <a href="../index.html" class="btn-salir">Cerrar Sesión</a>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn-accion" onclick="mostrarTodo()">Inventario Completo</button>
+            <button class="btn-accion btn-naranja" onclick="filtrarStockBajo()">Stock &lt; 10 piezas</button>
+            <button class="btn-accion" onclick="filtrarStockAlto()">Stock &gt; 20 piezas</button>
+        </div>
+
+        <h2>Control de Stock e Inventario</h2>
+        <div id="productos" class="productos-grid">Cargando inventario...</div>
+    </div>
+
+    <!-- Script conectado desde la carpeta js/ -->
+    <script src="../js/inventario.js"></script>
+</body>
+</html>

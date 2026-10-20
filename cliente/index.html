@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - TecSell</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body onload="cargarInventario()">
+
+    <div class="panel-container">
+        <div class="header-panel">
+            <img src="../img/logo-tecsell.png" alt="Logo" width="80">
+            <h1>Catálogo de Productos</h1>
+            <a href="../index.html" class="btn-salir">Salir</a>
+        </div>
+
+        <div class="toolbar">
+            <button class="btn-accion" onclick="mostrarTodo()">Ver Todo el Catálogo</button>
+            <button class="btn-accion" onclick="filtrarPrecioMayor()">Precio &gt; $1,500</button>
+            <button class="btn-accion btn-naranja" onclick="filtrarPrecioMenor()">Precio &lt; $1,500</button>
+        </div>
+
+        <h2>Productos Disponibles</h2>
+        <div id="productos" class="productos-grid">Cargando catálogo...</div>
+    </div>
+
+    <!-- Script conectado desde la carpeta js/ -->
+    <script src="../js/inventario.js"></script>
+</body>
+</html>

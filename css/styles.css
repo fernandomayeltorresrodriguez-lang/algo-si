@@ -1,0 +1,147 @@
+:root {
+    --color-blanco: #ffffff;
+    --color-fondo: #f4f8fb;
+    --color-azul: #003366;
+    --color-celeste: #0099ff;
+    --color-naranja: #ff6600;
+    --color-texto: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 0;
+    padding: 20px;
+}
+
+.portada-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.portada-card {
+    background: var(--color-blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 51, 102, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    border-top: 5px solid var(--color-naranja);
+}
+
+.logo-img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: var(--color-azul);
+}
+
+.roles-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-rol, .btn-accion {
+    background-color: var(--color-celeste);
+    color: var(--color-blanco);
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn-rol:hover, .btn-accion:hover {
+    background-color: var(--color-azul);
+}
+
+.btn-naranja {
+    background-color: var(--color-naranja);
+}
+.btn-naranja:hover {
+    background-color: #e55c00;
+}
+
+/* Paneles de Roles */
+.panel-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.header-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-salir {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--color-blanco);
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid var(--color-celeste);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card.alerta-stock {
+    border-top-color: var(--color-naranja);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-azul);
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
